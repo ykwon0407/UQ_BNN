@@ -4,9 +4,10 @@ Keras implementation of the paper "Uncertainty quantification using Bayesian neu
 
 ## Scripts
 
+```bash
 .
 ├── input
-├   ├── (train folders...)
+├   ├── (train/test datasets...)
 ├── README.md
 └── src
     ├── configs
@@ -17,12 +18,17 @@ Keras implementation of the paper "Uncertainty quantification using Bayesian neu
     ├── train.py
     ├── utils.py
     └── weights (empty)
-
+```
 
 - `data.py` loads '.nii' image files efficiently 
 - `train.py` main train file
 - `models.py` contains the scripts for the Bayesian dropout and network architectures (multiscale 3D U-Net).
 
+## Usage
+
+```bash
+python train.py --cnf c_spes_kendall
+```
 
 ## Creators
 
