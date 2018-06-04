@@ -1,6 +1,6 @@
 ## Uncertainty quantification using Bayesian neural networks in classification: Application to ischemic stroke lesion segmentation (version 0.0.1)
 
-Pytorch implementation of the paper "Uncertainty quantification using Bayesian neural networks in classification". This github is under construction at April 2018.
+Keras implementation of the paper "Uncertainty quantification using Bayesian neural networks in classification". This github is under construction at April 2018.
 
 ## Scripts
 
