@@ -3,7 +3,7 @@
 Keras implementation of the paper "Uncertainty quantification using Bayesian neural networks in classification". This github is under construction at April 2018.
 
 
-I strongly recommend to see the good implementation by Walter de Back [notebook](https://gitlab.com/wdeback/dl-keras-tutorial/blob/master/notebooks/3-cnn-segment-retina-uncertainty.ipynb).
+I strongly recommend to see the good implementation by Walter de Back. [[notebook](https://gitlab.com/wdeback/dl-keras-tutorial/blob/master/notebooks/3-cnn-segment-retina-uncertainty.ipynb)].
 
 
 ## Scripts
