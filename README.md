@@ -24,7 +24,7 @@ I strongly recommend to see the good implementation using the DRIVE dataset by W
 └── retina
     ├── fig
     ├── input
-	│   └── (train/test datasets form DRIVE)
+    │   └── (train/test datasets form DRIVE)
     ├── model.py
     ├── UQ_DRIVE_stochastic_sample_2000.ipynb
     ├── UQ_DRIVE_stochastic_sample_200.ipynb
