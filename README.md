@@ -15,7 +15,8 @@ epistemic = np.mean(p_hat**2, axis=0) - np.mean(p_hat, axis=0)**2
 aleatoric = np.mean(p_hat*(1-p_hat), axis=0)
 ```
 
-![Alt text](figure/comparison_main.png?raw=true "Visual comparison between the proposed and Kendall and Gal (2017) methods")
+- Example of visual comparison between the proposed and Kendall and Gal (2017) methods
+![Visual comparison between the proposed and Kendall and Gal (2017) methods](figure/comparison_main.png?raw=true "Visual comparison between the proposed and Kendall and Gal (2017) methods")
 
 ## A directory tree
 
