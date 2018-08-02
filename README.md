@@ -15,6 +15,8 @@ epistemic = np.mean(p_hat**2, axis=0) - np.mean(p_hat, axis=0)**2
 aleatoric = np.mean(p_hat*(1-p_hat), axis=0)
 ```
 
+![Alt text](figure/comparison_main.png?raw=true "Visual comparison between the proposed and Kendall and Gal (2017) methods")
+
 ## A directory tree
 
 ```bash
@@ -49,6 +51,7 @@ aleatoric = np.mean(p_hat*(1-p_hat), axis=0)
 - [DRIVE website](https://www.isi.uu.nl/Research/Databases/DRIVE/)
 - Oskar Maier et al. ISLES 2015 - A public evaluation benchmark for ischemic stroke lesion segmentation from multispectral MRI, Medical Image Analysis, Available online 21 July 2016, ISSN 1361-8415, http://dx.doi.org/10.1016/j.media.2016.07.009. 
 - J.J. Staal, M.D. Abramoff, M. Niemeijer, M.A. Viergever, B. van Ginneken, "Ridge based vessel segmentation in color images of the retina", IEEE Transactions on Medical Imaging, 2004, vol. 23, pp. 501-509.
+- Kendall, Alex, and Yarin Gal. "What uncertainties do we need in bayesian deep learning for computer vision?." Advances in neural information processing systems. 2017.
 
 ## Author
 
