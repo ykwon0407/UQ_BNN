@@ -1,4 +1,4 @@
-## Uncertainty quantification using Bayesian neural networks in classification: Application to ischemic stroke lesion segmentation
+## Uncertainty quantification using Bayesian neural networks in classification: Application to biomedical imaging segmentation
 
 This repository provides the Keras implementation of the paper "Uncertainty quantification using Bayesian neural networks in classification: Application to biomedical imaging segmentation", accepted as oral presentation at the [MIDL 2018](https://midl.amsterdam/). In this repo, we demonstrate the proposed method using the two biomedical imaging segmentation datasets: the ISLES and the DRIVE datasets. For more detailed information, please see the [ISLES](ischemic/src) and [DRIVE](retina).
 
