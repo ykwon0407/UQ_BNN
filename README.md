@@ -1,17 +1,30 @@
-## Uncertainty quantification using Bayesian neural networks in classification: Application to ischemic stroke lesion segmentation (version 0.0.2)
+## Uncertainty quantification using Bayesian neural networks in classification: Application to ischemic stroke lesion segmentation
 
-Keras implementation of the paper "Uncertainty quantification using Bayesian neural networks in classification". This github is under construction at June 2018.
+[paper](https://openreview.net/forum?id=Sk_P2Q9sG)
+
+This repository provides the Keras implementation of the paper "Uncertainty quantification using Bayesian neural networks in classification: Application to biomedical imaging segmentation". In this repo, we demonstrate the proposed method using the two biomedical imaging segmentation datasets: the ISLES and the DRIVE datasets. For more detailed information, please see the [ISLES](ischemic/src) and [DRIVE](retina).
+
+I also strongly recommend to see the good implementation using the DRIVE dataset by Walter de Back. [[notebook](https://gitlab.com/wdeback/dl-keras-tutorial/blob/master/notebooks/3-cnn-segment-retina-uncertainty.ipynb)].
 
 
-I strongly recommend to see the good implementation using the DRIVE dataset by Walter de Back. [[notebook](https://gitlab.com/wdeback/dl-keras-tutorial/blob/master/notebooks/3-cnn-segment-retina-uncertainty.ipynb)].
+### Main part for the proposed uncertainty quantification method
 
+- Once you have a trained Bayesian neural network, the proposed uncertainty quantification method is simple !!!
 
-## Directories
+In a binary segmentaion, a numpy array `p_hat` with dimension (number of estimates, dimension of features), then the epistemic and aleatoric uncertainties can be obtained by the following code.
+
+```
+epistemic = np.mean(p_hat**2, axis=0) - np.mean(p_hat, axis=0)**2
+aleatoric = np.mean(p_hat*(1-p_hat), axis=0)
+```
+
+### A directory tree
 
 ```bash
 .
 ├── ischemic
 │   ├── input
+│   │   └── (train/test datasets)
 │   └── src
 │       ├── configs (empty)
 │       ├── data.py
@@ -24,7 +37,7 @@ I strongly recommend to see the good implementation using the DRIVE dataset by W
 └── retina
     ├── fig
     ├── input
-    │   └── (train/test datasets form DRIVE)
+    │   └── (train/test datasets)
     ├── model.py
     ├── UQ_DRIVE_stochastic_sample_2000.ipynb
     ├── UQ_DRIVE_stochastic_sample_200.ipynb
@@ -33,40 +46,11 @@ I strongly recommend to see the good implementation using the DRIVE dataset by W
 
 ```
 
-## Ischemic stroke lesion segmentation
+### References
 
-## Dataset
-
-Ischemic stroke lesion segmentation 2015 dataset (XXX)
-
-## Code
-
-- `data.py` loads '.nii' image files efficiently 
-- `train.py` main train file
-- `models.py` contains the scripts for the Bayesian dropout and network architectures (multiscale 3D U-Net).
-
-## Usage 
-
-```bash
-python train.py --cnf c_spes_kendall # for the Kendall and Gal implementation
-python train.py --cnf c_spes_proposed # for the Kwon et al. implementation
-```
-
-## Retina vessel segmentation
-
-## Dataset
-
-DRIVE dataset (XXX)
-
-## Code
-
-- `models.py` contains the scripts for the Bayesian dropout and network architectures (2D U-Net).
-- `utils.py` contains functions for the prediction and the preprocessing procedures.
-
-## Usage 
-
-Implementations are detailed at `UQ_DRIVE_stochastic_sample_2000.ipynb` and `UQ_DRIVE_stochastic_sample_200.ipynb`.
-
-
+- [ISLES](http://www.isles-challenge.org/)
+- Oskar Maier et al. ISLES 2015 - A public evaluation benchmark for ischemic stroke lesion segmentation from multispectral MRI, Medical Image Analysis, Available online 21 July 2016, ISSN 1361-8415, http://dx.doi.org/10.1016/j.media.2016.07.009. 
+- [DRIVE](https://www.isi.uu.nl/Research/Databases/DRIVE/)
+- J.J. Staal, M.D. Abramoff, M. Niemeijer, M.A. Viergever, B. van Ginneken, "Ridge based vessel segmentation in color images of the retina", IEEE Transactions on Medical Imaging, 2004, vol. 23, pp. 501-509.
 
 
