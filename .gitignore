@@ -1,1 +1,7 @@
 ischemic/*.sh
+__pycache__/
+*.pyc
+.gitignore
+weights/
+input/
+.ipynb_checkpoints/
