@@ -32,7 +32,7 @@ aleatoric = np.mean(p_hat*(1-p_hat), axis=0)
 │       ├── settings.py
 │       ├── train.py
 │       ├── utils.py
-│ 		└── weights (empty)
+│       └── weights (empty)
 ├── README.md
 └── retina
     ├── fig
