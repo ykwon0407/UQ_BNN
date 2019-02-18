@@ -1,6 +1,8 @@
 ### UQ for Ischemic Stroke Lesion Segmentation 2015 (ISLES 2015)
 
-## Getting started (requires datasets)
+``The codes assume the 'channel-first' order.``
+
+## Getting started (Need to download ISLES datasets at the ISLES website)
 
 ```bash
 python train.py --cnf c_spes_kendall # for the Kendall and Gal implementation
